@@ -2,7 +2,6 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     RateLimit = require('express-rate-limit'),
     cors = require('cors'),
-    MongoStore = require('connect-mongo'),
     dotenv = require('dotenv'),
     mongoose = require('mongoose'),
     rankingController = require('./controllers/ranking');

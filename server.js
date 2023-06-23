@@ -1,6 +1,5 @@
 const express = require('express'),
     bodyParser = require('body-parser'),
-    helmet = require('helmet'),
     RateLimit = require('express-rate-limit'),
     cors = require('cors'),
     MongoStore = require('connect-mongo'),
@@ -29,7 +28,6 @@ mongoose.connection.on('error', (err) => {
 })
 
 // Install middlewares
-app.use(helmet());
 app.use(limiter);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
